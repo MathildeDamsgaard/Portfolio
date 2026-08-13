@@ -260,12 +260,11 @@ body {
 }
 
 .bio-section__title {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Anton", sans-serif;
   font-weight: 700;
-  font-size: 2.2rem;
-  color: #5c4326;
-  text-shadow: 2px 2px 0px rgba(92, 67, 38, 0.25);
-  margin-bottom: 1.5rem;
+  font-size: 3.5rem;
+  color: #43301a;
+  margin-bottom: 2rem;
 }
 
 .bio-section__body {
@@ -288,6 +287,18 @@ body {
 
 .bio-section__text p:last-child {
   margin-bottom: 0;
+}
+
+.bio__contact-row {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.bio__contact-icon {
+  color: #2b2b2b;
+  font-size: 1.6rem;
+  line-height: 1;
 }
 
 /* Polaroid-billeder */
