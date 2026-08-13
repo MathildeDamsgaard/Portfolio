@@ -236,6 +236,54 @@ body {
   color: #2b2b2b;
 }
 
+/* ===== Kontakt-sektion (forside) ===== */
+.contact-cta {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 8rem;
+  text-align: center;
+}
+
+.contact-cta__title {
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #43301a;
+  margin-bottom: 1rem;
+}
+
+.contact-cta__text {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  color: #2b2b2b;
+  margin-bottom: 2.5rem;
+}
+
+.contact-cta__mail-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.contact-cta__icon {
+  color: #2b2b2b;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.contact-cta__link {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  color: #e2a24b;
+  text-decoration: underline;
+}
+
+.contact-cta__link:hover {
+  text-decoration: underline;
+}
+
 /* ===== Om mig-siden ===== */
 .bio {
   max-width: 1200px;
