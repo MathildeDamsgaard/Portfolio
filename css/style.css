@@ -1,0 +1,385 @@
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  background-color: #efe8de;
+  color: #2b2b2b;
+}
+
+/* ===== Hero sektion ===== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 50vw;
+  overflow: hidden;
+  background-color: #efe8de;
+}
+
+/* Stor hvid "PORTFOLIO" tekst i baggrunden */
+.hero__background-text {
+  position: absolute;
+  top: 6vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Anton", sans-serif;
+  font-size: 15vw;
+  line-height: 1;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  user-select: none;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+/* Navnet i script-font, ligger ovenpå baggrundsteksten */
+.hero__name {
+  position: absolute;
+  top: 17vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 8vw;
+  font-weight: 400;
+  color: #43301a; /* mørk brun/oliven farve som på billedet */
+  z-index: 2;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+}
+
+/* Billede af Mathilde, placeret i højre side */
+.hero__image-wrapper {
+  position: absolute;
+  right: 7vw;
+  bottom: 6px;
+  width: 22vw;
+  max-width: 420px;
+  z-index: 2;
+}
+
+.hero__image {
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Introtekst og knap nede til venstre */
+.hero__content {
+  position: absolute;
+  left: 10vw;
+  bottom: 10vw;
+  max-width: 52vw;
+  z-index: 2;
+}
+
+.hero__intro {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #2b2b2b;
+}
+
+.hero__button {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.9rem 2rem;
+  border: 2px solid #e2a24b; /* orange kant */
+  border-radius: 50px;
+  color: #2b2b2b;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  background-color: transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.hero__button:hover {
+  background-color: #e2a24b;
+  color: #ffffff;
+}
+
+/* Orange streg i bunden af sektionen */
+.hero__divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #e2a24b;
+  z-index: 2;
+}
+
+/* ===== Projekt-sektion ===== */
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.projects__title {
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-align: center;
+  color: #43301a;
+  margin-bottom: 4rem;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+/* Vender rækkefølgen om, så billedet ligger til højre */
+.project-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.project-row__image {
+  flex: 1 1 380px;
+}
+
+.project-row__image img {
+  width: 100%;
+  display: block;
+}
+
+/* Gør kun Museum Ovartaci-billedet mindre */
+.project-row__image--small {
+  flex: 0 1 300px; /* mindre max-bredde end den almindelige 380px */
+  margin: 0 auto; /* centrerer den i sin kolonne */
+}
+
+.project-row__text {
+  flex: 1 1 380px;
+}
+
+.project-row__title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  color: #2b2b2b;
+}
+
+.project-row__desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #2b2b2b;
+  margin-bottom: 1.5rem;
+}
+
+.project-row__link {
+  color: #e2a24b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.project-row__link:hover {
+  color: #c8862f;
+}
+
+/* Orange streg mellem projekterne */
+.projects__divider {
+  height: 3px;
+  background-color: #e2a24b;
+  margin: 4rem 0;
+}
+
+@media (max-width: 700px) {
+  .project-row,
+  .project-row--reverse {
+    flex-direction: column;
+  }
+  .bio-section__body {
+    flex-direction: column;
+  }
+
+  .bio-section__photos {
+    min-height: 260px;
+    width: 100%;
+  }
+
+  .bio-photo--right {
+    left: 40%;
+  }
+}
+
+/* ===== Sektion under stregen ===== */
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.about__title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #5c4326;
+}
+
+.about__text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #2b2b2b;
+}
+
+/* ===== Om mig-siden ===== */
+.bio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.bio__back {
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: #2b2b2b;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+}
+
+.bio__back:hover {
+  color: #e2a24b;
+}
+
+.bio-section {
+  margin-bottom: 5rem;
+}
+
+.bio-section__title {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #5c4326;
+  text-shadow: 2px 2px 0px rgba(92, 67, 38, 0.25);
+  margin-bottom: 1.5rem;
+}
+
+.bio-section__body {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.bio-section__text {
+  flex: 2 1 500px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2b2b2b;
+}
+
+.bio-section__text p {
+  margin-bottom: 1.5rem;
+}
+
+.bio-section__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Polaroid-billeder */
+.bio-section__photos {
+  flex: 1 1 260px;
+  position: relative;
+  min-height: 320px;
+}
+
+.bio-section__photos--single {
+  min-height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.bio-section__closing {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.bio__contact-link {
+  display: inline-block;
+  color: #e2a24b;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 1.1rem;
+}
+
+.bio__contact-link:hover {
+  color: #c8862f;
+}
+
+.bio-photo {
+  width: 340px;
+  display: block;
+}
+
+.bio-photo--left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 320px;
+  transform: rotate(-6deg);
+}
+
+.bio-photo--right {
+  position: absolute;
+  left: 170px;
+  top: 70px;
+  z-index: 1;
+  width: 380px;
+  transform: rotate(10deg);
+}
+
+/* ===== Responsivt (mobil) ===== */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 4rem;
+  }
+
+  .hero__background-text {
+    position: static;
+    font-size: 18vw;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .hero__name {
+    position: static;
+    font-size: 12vw;
+    text-align: center;
+    margin: -6vw 0 2rem 0;
+  }
+
+  .hero__image-wrapper {
+    position: static;
+    width: 60vw;
+    margin: 0 auto 2rem auto;
+  }
+
+  .hero__content {
+    position: static;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .hero__divider {
+    position: static;
+    margin-top: 3rem;
+  }
+}
