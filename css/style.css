@@ -799,6 +799,23 @@ html {
   max-width: 260px;
 }
 
+.case-row__desc--bold {
+  font-weight: 600;
+}
+
+/* Museum Ovartaci-siden */
+.case-img--statue {
+  max-width: 440px;
+}
+
+.case-img--research {
+  max-width: 490px;
+}
+
+.case-img--kiosk {
+  max-width: 380px;
+}
+
 @media (max-width: 700px) {
   .case-row,
   .case-row--reverse {
