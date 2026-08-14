@@ -316,8 +316,6 @@ body {
 .project-row__link {
   color: #a43121;
   font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 4px;
 }
 
 .project-row__link:hover {
@@ -435,7 +433,6 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
   color: #a43121;
-  text-decoration: underline;
 }
 
 .contact-cta__link:hover {
@@ -699,6 +696,114 @@ html {
   height: 2px;
   background-color: #a43121;
   margin: 1.5rem 0 2.5rem;
+}
+
+/* ===== Case study-side (projektside) ===== */
+.case-study {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 6rem;
+}
+
+.case-row {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+
+.case-row--reverse {
+  flex-direction: row-reverse;
+}
+
+.case-row__image {
+  flex: 1 1 380px;
+  display: flex;
+  justify-content: center;
+}
+
+.case-row__image--stacked {
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.case-row__text {
+  flex: 1 1 380px;
+}
+
+.case-row__heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.case-row__number {
+  font-family: "Playfair Display", serif;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: #2b2b2b;
+  margin-bottom: 0.2rem;
+}
+
+.case-row__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.case-row__desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2b2b2b;
+  margin-bottom: 1.2rem;
+}
+
+.case-row__link {
+  color: #a1402a;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.case-row__link:hover {
+  color: #7e3020;
+}
+
+/* Basisstil alle billeder deler */
+.case-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Individuelle størrelser pr. billede — juster frit efter behov */
+.case-img--logo {
+  max-width: 380px;
+}
+
+.case-img--persona {
+  max-width: 420px;
+}
+
+.case-img--styleguide {
+  max-width: 420px;
+}
+
+.case-img--laptop {
+  max-width: 680px;
+}
+
+.case-img--phone {
+  max-width: 260px;
+}
+
+@media (max-width: 700px) {
+  .case-row,
+  .case-row--reverse {
+    flex-direction: column;
+  }
 }
 
 /* ===== Responsivt (mobil) ===== */
