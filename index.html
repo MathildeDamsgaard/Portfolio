@@ -12,111 +12,176 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Mrs+Saint+Delafield&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
-
   <body>
-    <header class="hero">
+    <header class="hero" id="top">
+      <!-- Navigation -->
+      <nav class="hero__nav">
+        <a href="ommig.html">Om mig</a>
+        <span class="hero__nav-divider">|</span>
+        <a href="index.html#projekter">Projekter</a>
+        <span class="hero__nav-divider">|</span>
+        <a href="index.html#kontakt">Kontakt</a>
+      </nav>
+
       <!-- Baggrundstekst -->
-      <h1 class="hero__background-text">PORTFOLIO</h1>
+      <h1 class="hero__background-text">Portfolio</h1>
 
       <!-- Navn i script-font, ligger ovenpå baggrundsteksten -->
       <h2 class="hero__name">Mathilde Damsgaard</h2>
 
-      <!-- Billede af Mathilde -->
-      <div class="hero__image-wrapper">
-        <img
-          src="img/billede.png"
-          alt="Mathilde Damsgaard"
-          class="hero__image"
-        />
+      <!-- Filmstrip-billede -->
+      <div class="hero__filmstrip">
+        <img src="img/filmstribe.png" alt="Filmstrip med billeder af mig" />
       </div>
 
-      <!-- Introtekst -->
-      <div class="hero__content">
-        <p class="hero__intro">
-          Hej!<br />
-          Mit navn er Mathilde, jeg er 24 år gammel og bor i Aarhus. Til dagligt
-          studerer jeg <strong>multimediedesign</strong> på Erhvervsakademi
-          Aarhus. Velkommen til mit portfolio!
-        </p>
-
-        <a href="ommig.html" class="hero__button">Vil du vide mere?</a>
-      </div>
+      <!-- Pil der peger ned mod næste sektion -->
+      <a
+        href="index.html#projekter"
+        class="hero__scroll-arrow"
+        aria-label="Scroll ned til projekter"
+      >
+        <svg
+          width="32"
+          height="120"
+          viewBox="0 0 24 90"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="12"
+            y1="0"
+            x2="12"
+            y2="75"
+            stroke="currentColor"
+            stroke-width="2"
+          />
+          <polyline
+            points="2,65 12,85 22,65"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
 
       <!-- Orange streg i bunden -->
       <div class="hero__divider"></div>
     </header>
-   
-  <!-- Projekt-sektion lige under hero -->
-  <section class="projects" id="projekter">
-    <h2 class="projects__title">UDVALGTE PROJEKTER</h2>
- 
-    <!-- Projekt 1: billede venstre, tekst højre -->
-    <div class="project-row">
-      <div class="project-row__image fly-in-left">
-        <img src="img/hundehimlen-mockup.png" alt="Hundehimlen webshop vist på en bærbar computer">
-      </div>
-      <div class="project-row__text">
-        <h3 class="project-row__title">Hundehimlen</h3>
-        <p class="project-row__desc">
-          Et e-commerce-projekt, hvor vi udviklede en moderne
-          og brugervenlig webshop til hundeejere med fokus på
-          kvalitetsprodukter, stærk visuel identitet og en enkel
-          købsoplevelse. Projektet omfattede bl.a. UX/UI-design,
-          WordPress, WooCommerce og SEO.
-        </p>
-        <a href="#" class="project-row__link">Udforsk projektet</a>
-      </div>
-    </div>
- 
-    <div class="projects__divider"></div>
- 
-    <!-- Projekt 2: tekst venstre, billede højre -->
-    <div class="project-row project-row--reverse">
-      <div class="project-row__image project-row__image--small fly-in-right">
-        <img src="img/museum-ovartaci-mockup.png" alt="Museum Ovartaci quiz vist på en infoskærm">
-      </div>
-      <div class="project-row__text">
-        <h3 class="project-row__title">Museum Ovartaci</h3>
-        <p class="project-row__desc">
-          Et interaktivt museumsprojekt, hvor vi udviklede en
-          digital quiz, der matcher besøgende med et Ovartaci-
-          værk ud fra deres personlighed. Formålet var at skabe
-          en mere engagerende og interaktiv museumsoplevelse
-          for en yngre målgruppe gennem UX/UI-design,
-          prototyping og webudvikling.
-        </p>
-        <a href="#" class="project-row__link">Udforsk projektet</a>
-      </div>
-    </div>
 
-    <section class="contact-cta">
-  <h2 class="contact-cta__title">Vil du høre mere?</h2>
-  <p class="contact-cta__text">Jeg er altid frisk på at tale idéer, projekter eller samarbejde.</p>
-  <p class="contact-cta__mail-row">
-    <span class="contact-cta__icon">&#9993;</span>
-    <a href="mailto:mathilde@damsgaard-hansen.dk" class="contact-cta__link">mathilde@damsgaard-hansen.dk</a>
-  </p>
-</section>
-<script>
-    // Observerer billederne og tilføjer "is-visible" når de scrolles ind i skærmbilledet
-    const flyInElements = document.querySelectorAll('.fly-in-left, .fly-in-right');
- 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target); // kør kun animationen én gang
-        }
-      });
-    }, {
-      threshold: 0.2 // starter når 20% af billedet er synligt
-    });
- 
-    flyInElements.forEach(el => observer.observe(el));
-  </script>
- 
+    <!-- Projekt-sektion lige under hero -->
+    <section class="projects" id="projekter">
+      <h2 class="projects__title">Udvalgte projekter</h2>
 
+      <!-- Projekt 1: billede venstre, tekst højre -->
+      <div class="project-row">
+        <div class="project-row__image fly-in-left">
+          <img
+            src="img/hundehimlen-mockup.png"
+            alt="Hundehimlen webshop vist på en bærbar computer"
+          />
+        </div>
+        <div class="project-row__text">
+          <h3 class="project-row__title">Hundehimlen</h3>
+          <p class="project-row__desc">
+            Et e-commerce-projekt, hvor vi udviklede en moderne og brugervenlig
+            webshop til hundeejere med fokus på kvalitetsprodukter, stærk visuel
+            identitet og en enkel købsoplevelse. Projektet omfattede bl.a.
+            UX/UI-design, WordPress, WooCommerce og SEO.
+          </p>
+          <a href="#" class="project-row__link">Udforsk projektet</a>
+        </div>
+      </div>
+
+      <div class="projects__divider"></div>
+
+      <!-- Projekt 2: tekst venstre, billede højre -->
+      <div class="project-row project-row--reverse">
+        <div class="project-row__image project-row__image--small fly-in-right">
+          <img
+            src="img/museum-ovartaci-mockup.png"
+            alt="Museum Ovartaci quiz vist på en infoskærm"
+          />
+        </div>
+        <div class="project-row__text">
+          <h3 class="project-row__title">Museum Ovartaci</h3>
+          <p class="project-row__desc">
+            Et interaktivt museumsprojekt, hvor vi udviklede en digital quiz,
+            der matcher besøgende med et Ovartaci- værk ud fra deres
+            personlighed. Formålet var at skabe en mere engagerende og
+            interaktiv museumsoplevelse for en yngre målgruppe gennem
+            UX/UI-design, prototyping og webudvikling.
+          </p>
+          <a href="#" class="project-row__link">Udforsk projektet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontakt-sektion nederst på forsiden -->
+    <section class="contact-cta" id="kontakt">
+      <h2 class="contact-cta__title">Vil du høre mere?</h2>
+      <p class="contact-cta__text">
+        Jeg er altid frisk på at tale idéer, projekter eller samarbejde.
+      </p>
+      <p class="contact-cta__mail-row">
+        <span class="contact-cta__icon">&#9993;</span>
+        <a href="mailto:mathilde@damsgaard-hansen.dk" class="contact-cta__link"
+          >mathilde@damsgaard-hansen.dk</a
+        >
+      </p>
+    </section>
+
+    <footer class="footer">
+      <!-- Venstre side -->
+      <div class="footer__left">
+        <p class="footer__nav">
+          <a href="index.html">Forside</a> | <a href="ommig.html">Om mig</a>
+        </p>
+        <p>&copy; 2026 Mathilde Damsgaard.</p>
+      </div>
+
+      <!-- Højre side: Tilbage til toppen -->
+      <a href="#" class="back-to-top-inline">
+        Tilbage til toppen
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </a>
+    </footer>
+
+    <script>
+      // Observerer billederne og tilføjer "is-visible" når de scrolles ind i skærmbilledet
+      const flyInElements = document.querySelectorAll(
+        ".fly-in-left, .fly-in-right",
+      );
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target); // kør kun animationen én gang
+            }
+          });
+        },
+        {
+          threshold: 0.2, // starter når 20% af billedet er synligt
+        },
+      );
+
+      flyInElements.forEach((el) => observer.observe(el));
+    </script>
   </body>
 </html>

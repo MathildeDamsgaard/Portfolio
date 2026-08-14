@@ -15,7 +15,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 50vw;
+  height: 50vw; /* fast højde der passer til indholdet, i stedet for 100vh */
   overflow: hidden;
   background-color: #efe8de;
 }
@@ -23,11 +23,10 @@ body {
 /* Stor hvid "PORTFOLIO" tekst i baggrunden */
 .hero__background-text {
   position: absolute;
-  top: 6vw;
-  left: 50%;
-  animation: dropIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  top: 14vw;
+  left: -8vw;
   font-family: "Anton", sans-serif;
-  font-size: 15vw;
+  font-size: 16vw;
   line-height: 1;
   color: #ffffff;
   letter-spacing: 0.01em;
@@ -37,91 +36,109 @@ body {
   text-align: center;
   width: 100%;
 }
-
-/* Teksten falder ned fra oven og lander med et lille hop */
-@keyframes dropIn {
-  0% {
-    transform: translate(-50%, -120%);
-    opacity: 0;
-  }
-  70% {
-    transform: translate(-50%, 8%);
-    opacity: 1;
-  }
-  85% {
-    transform: translate(-50%, -4%);
-  }
-  100% {
-    transform: translate(-50%, 0);
-  }
-}
-
 /* Navnet i script-font, ligger ovenpå baggrundsteksten */
 .hero__name {
   position: absolute;
-  top: 17vw;
-  left: 50%;
+  top: 24vw;
+  left: 47%;
   transform: translateX(-50%);
   font-family: "Mrs Saint Delafield", cursive;
   font-size: 8vw;
   font-weight: 400;
-  color: #43301a; /* mørk brun/oliven farve som på billedet */
+  color: #5c4326; /* mørk brun/oliven farve som på billedet */
   z-index: 2;
   white-space: nowrap;
   text-align: center;
   width: 100%;
 }
 
-/* Billede af Mathilde, placeret i højre side */
-.hero__image-wrapper {
+/* Navigationspille øverst */
+.hero__nav {
   position: absolute;
-  right: 7vw;
-  bottom: 6px;
-  width: 22vw;
-  max-width: 420px;
-  z-index: 2;
+  top: 4vw;
+  left: 50%;
+  transform: translateX(
+    -8vw
+  ); /* trukket lidt mod venstre pga. filmstrip i højre side */
+  background-color: #a43121; /* rustfarve, matcher filmstrippen */
+  border-radius: 20px;
+  padding: 1rem 2.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  z-index: 3;
+  white-space: nowrap;
 }
 
-.hero__image {
-  width: 100%;
-  display: block;
-  border-radius: 4px;
-}
-
-/* Introtekst og knap nede til venstre */
-.hero__content {
-  position: absolute;
-  left: 10vw;
-  bottom: 10vw;
-  max-width: 52vw;
-  z-index: 2;
-}
-
-.hero__intro {
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: #2b2b2b;
-}
-
-.hero__button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.9rem 2rem;
-  border: 2px solid #e2a24b; /* orange kant */
-  border-radius: 50px;
-  color: #2b2b2b;
-  text-decoration: none;
+.hero__nav a {
   font-family: "Playfair Display", serif;
-  font-size: 1.1rem;
-  background-color: transparent;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+  color: #f5efe6;
+  text-decoration: none;
+  font-size: 1.05rem;
 }
 
-.hero__button:hover {
-  background-color: #e2a24b;
-  color: #ffffff;
+.hero__nav a:hover {
+  opacity: 0.8;
+}
+
+.hero__nav-divider {
+  color: #d9a394;
+}
+
+/* Filmstrip-billede i højre side */
+.hero__filmstrip {
+  position: absolute;
+  right: -14vw;
+  top: -15vw;
+  width: 500px;
+  max-width: none;
+  z-index: 2;
+  transform: rotate(-16deg);
+}
+
+.hero__filmstrip img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  animation: dropIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Billedet falder ned fra oven og lander med et lille hop */
+@keyframes dropIn {
+  0% {
+    transform: translate(-50%, -120%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, 8%);
+    opacity: 1;
+  }
+}
+
+/* Pil der peger ned mod næste sektion */
+.hero__scroll-arrow {
+  position: absolute;
+  left: 6vw;
+  bottom: 3vw;
+  color: #a43121;
+  z-index: 2;
+  animation: bounceArrow 1.8s ease-in-out infinite;
+}
+
+.hero__scroll-arrow:hover {
+  opacity: 0.75;
+}
+
+/* Pilen hopper let op og ned for at signalere "scroll her" */
+@keyframes bounceArrow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(14px);
+  }
 }
 
 /* Orange streg i bunden af sektionen */
@@ -131,7 +148,7 @@ body {
   left: 0;
   width: 100%;
   height: 6px;
-  background-color: #e2a24b;
+  background-color: #a43121;
   z-index: 2;
 }
 
@@ -197,20 +214,20 @@ body {
 }
 
 .project-row__link {
-  color: #e2a24b;
+  color: #a43121;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .project-row__link:hover {
-  color: #c8862f;
+  color: #792216;
 }
 
 /* Orange streg mellem projekterne */
 .projects__divider {
   height: 3px;
-  background-color: #e2a24b;
+  background-color: #a43121;
   margin: 4rem 0;
 }
 
@@ -317,12 +334,78 @@ body {
 .contact-cta__link {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
-  color: #e2a24b;
+  color: #a43121;
   text-decoration: underline;
 }
 
 .contact-cta__link:hover {
   text-decoration: underline;
+}
+
+/* Sørg for blød scrolling til toppen */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Footer layout */
+.footer {
+  display: flex;
+  justify-content: space-between; /* Skubber venstre side til venstre og linket til højre */
+  align-items: center;
+  max-width: 1100px; /* Matcher bredden på dine andre sektioner */
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.footer__left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.footer__left a {
+  color: #2b2b2b;
+  text-decoration: none;
+}
+
+.footer__left a:hover {
+  color: #a43121;
+}
+
+/* Tilbage til toppen - placeret i højre side */
+.back-to-top-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2b2b2b;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  transition: color 0.2s ease;
+}
+
+.back-to-top-inline svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease;
+}
+
+/* Hover-effekt */
+.back-to-top-inline:hover {
+  color: #a43121;
+}
+
+.back-to-top-inline:hover svg {
+  transform: translateY(-3px); /* Løfter pilen en smule ved hover */
+}
+
+/* Mobil-visning */
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
 }
 
 /* ===== Om mig-siden ===== */
@@ -341,7 +424,7 @@ body {
 }
 
 .bio__back:hover {
-  color: #e2a24b;
+  color: #a43121;
 }
 
 .bio-section {
@@ -410,7 +493,7 @@ body {
 
 .bio__contact-link {
   display: inline-block;
-  color: #e2a24b;
+  color: #a43121;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -418,7 +501,7 @@ body {
 }
 
 .bio__contact-link:hover {
-  color: #c8862f;
+  color: #792216;
 }
 
 .bio-photo {
@@ -442,6 +525,80 @@ body {
   z-index: 1;
   width: 380px;
   transform: rotate(10deg);
+}
+
+/* ===== CV / Uddannelse accordion ===== */
+.accordion {
+  margin-bottom: 0.5rem;
+}
+
+.accordion__summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: "Anton", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #43301a;
+  padding: 0.5rem 0;
+}
+
+/* Fjerner browserens eget udfoldnings-ikon */
+.accordion__summary::-webkit-details-marker {
+  display: none;
+}
+.accordion__summary::marker {
+  content: "";
+}
+
+/* Selve trekanten, tegnet i ren CSS */
+.accordion__arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 10px solid #a43121;
+  transition: transform 0.25s ease;
+  transform: rotate(-90deg); /* peger til højre, når lukket */
+}
+
+/* Peger nedad, når afsnittet er åbent */
+.accordion[open] .accordion__arrow {
+  transform: rotate(0deg);
+}
+
+.accordion__content {
+  padding: 0.5rem 0 1.5rem 1.9rem; /* rykket ind, så det linjer op med teksten efter trekanten */
+}
+
+.cv-item {
+  margin-bottom: 1.4rem;
+}
+
+.cv-item:last-child {
+  margin-bottom: 0;
+}
+
+.cv-item__title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  color: #2b2b2b;
+  margin-bottom: 0.2rem;
+}
+
+.cv-item__date {
+  font-family: "Playfair Display", serif;
+  font-size: 0.95rem;
+  color: #9a9a9a;
+}
+
+.accordion__divider {
+  height: 2px;
+  background-color: #a43121;
+  margin: 1.5rem 0 2.5rem;
 }
 
 /* ===== Responsivt (mobil) ===== */
