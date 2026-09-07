@@ -58,7 +58,7 @@ body {
   top: 4vw;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #a43121; /* rustfarve, matcher filmstrippen */
+  background-color: #601b20; /* rustfarve, matcher filmstrippen */
   border-radius: 20px;
   padding: 1rem 2.2rem;
   display: flex;
@@ -119,7 +119,7 @@ body {
   position: absolute;
   left: 6vw;
   bottom: 3vw;
-  color: #a43121;
+  color: #601b20;
   z-index: 2;
   animation: bounceArrow 1.8s ease-in-out infinite;
 }
@@ -146,7 +146,7 @@ body {
   left: 0;
   width: 100%;
   height: 6px;
-  background-color: #a43121;
+  background-color: #601b20;
   z-index: 2;
 }
 
@@ -179,7 +179,7 @@ body {
   flex-direction: column;
   justify-content: center;
   padding: 4rem 6vw;
-  max-width: 700px;
+  max-width: 850px;
 }
 
 .intro__text {
@@ -195,7 +195,7 @@ body {
   align-self: flex-start;
   padding: 1rem 2rem;
   border-radius: 20px;
-  background-color: #a43121; /* samme rustfarve som navigationspillen */
+  background-color: #601b20; /* samme rustfarve som navigationspillen */
   color: #f5efe6;
   text-decoration: none;
   font-family: "Playfair Display", serif;
@@ -212,7 +212,7 @@ body {
   position: absolute;
   right: 6vw;
   top: 80%;
-  color: #a43121;
+  color: #601b20;
   animation: bounceArrowCentered 1.8s ease-in-out infinite;
 }
 
@@ -823,6 +823,26 @@ html {
   }
 }
 
+.video-section {
+  margin-top: 0%;
+}
+
+.video-section__title {
+  margin-bottom: 30px;
+}
+
+.video-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.video-card video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
 /* ===== Responsivt (mobil) ===== */
 @media (max-width: 768px) {
   .hero {
@@ -860,5 +880,9 @@ html {
   .hero__divider {
     position: static;
     margin-top: 3rem;
+  }
+
+  .video-section__grid {
+    grid-template-columns: 1fr;
   }
 }
