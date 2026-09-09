@@ -779,10 +779,6 @@ html {
 }
 
 /* Individuelle størrelser pr. billede — juster frit efter behov */
-.case-img--logo {
-  max-width: 380px;
-}
-
 .case-img--persona {
   max-width: 420px;
 }
@@ -797,6 +793,31 @@ html {
 
 .case-img--phone {
   max-width: 260px;
+}
+
+.case-img--landingpage {
+  max-width: 680px;
+}
+
+.computer-video {
+  position: relative;
+  flex: 1 1 30%;
+}
+
+.computer-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.computer-video__screen {
+  position: absolute;
+  top: 13%;
+  left: 12%;
+  width: 75.7%;
+  height: 70%;
+  object-fit: cover;
+  z-index: 2;
 }
 
 .case-row__desc--bold {
@@ -841,6 +862,28 @@ html {
   width: 100%;
   display: block;
   border-radius: 10px;
+}
+
+.next-project {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 2rem;
+}
+
+.next-project__button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #7b272d;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: 0.2s ease;
+}
+
+.next-project__button:hover {
+  background-color: #a43121;
+  transform: translateY(-2px);
 }
 
 /* ===== Responsivt (mobil) ===== */
