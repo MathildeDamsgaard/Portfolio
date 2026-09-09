@@ -699,6 +699,37 @@ html {
 }
 
 /* ===== Case study-side (projektside) ===== */
+
+.hundehimlen-case__title {
+  text-align: center;
+  margin: 10px 0 70px;
+  font-size: 3rem;
+}
+
+/* .hundehimlen-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin: 10px auto 80px;
+  max-width: 1800px;
+}
+
+.hundehimlen-tags span {
+  padding: 9px 18px;
+  border: 2px solid #52685f;
+  border-radius: 30px;
+  background-color: #aebeb5;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hundehimlen-tags .tag--light {
+  background-color: #d0dad5;
+  color: #52685f;
+} */
+
 .case-study {
   max-width: 1200px;
   margin: 0 auto;
