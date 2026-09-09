@@ -700,7 +700,7 @@ html {
 
 /* ===== Case study-side (projektside) ===== */
 
-.hundehimlen-case__title {
+.project-case__title {
   text-align: center;
   margin: 10px 0 70px;
   font-size: 3rem;
@@ -800,6 +800,40 @@ html {
 
 .case-row__link:hover {
   color: #7e3020;
+}
+
+/* ===== Ovartaci - Projektet ===== */
+
+.case-row--project .case-row__image {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.case-row--project .case-row__image > .case-img,
+.case-row--project .case-img-wrapper {
+  width: calc(50% - 10px);
+}
+
+.case-row--project .case-img-wrapper {
+  position: relative;
+}
+
+.case-row--project .case-img-wrapper .case-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-row--project .case-img__gif {
+  position: absolute;
+  width: 70%;
+  height: auto;
+  top: 54.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  pointer-events: none;
 }
 
 /* Basisstil alle billeder deler */
