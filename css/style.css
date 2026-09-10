@@ -7,7 +7,7 @@
 
 body {
   font-family: "Playfair Display", serif;
-  background-color: #efe8de;
+  background-color: #f0f1e0;
   color: #2b2b2b;
 }
 
@@ -17,7 +17,7 @@ body {
   width: 100%;
   height: 50vw; /* fast højde der passer til indholdet, i stedet for 100vh */
   overflow: hidden;
-  background-color: #efe8de;
+  background-color: #f0f1e0;
 }
 
 /* Stor hvid "PORTFOLIO" tekst i baggrunden */
@@ -40,12 +40,12 @@ body {
 .hero__name {
   position: absolute;
   top: 23vw;
-  left: 46%;
+  left: 40%;
   transform: translateX(-50%);
   font-family: "Herr Von Muellerhoff", cursive;
-  font-size: 8vw;
+  font-size: 10vw;
   font-weight: 400;
-  color: #5c4326; /* mørk brun/oliven farve som på billedet */
+  color: #323236;
   z-index: 2;
   white-space: nowrap;
   text-align: center;
@@ -58,7 +58,7 @@ body {
   top: 4vw;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #7b272d; /* rustfarve, matcher filmstrippen */
+  background-color: #323236; /* rustfarve, matcher filmstrippen */
   border-radius: 20px;
   padding: 1rem 2.2rem;
   display: flex;
@@ -80,18 +80,18 @@ body {
 }
 
 .hero__nav-divider {
-  color: #d9a394;
+  color: #f5efe6;
 }
 
 /* Filmstrip-billede i højre side */
 .hero__filmstrip {
   position: absolute;
-  right: -14vw;
-  top: -15vw;
-  width: clamp(220px, 34vw, 500px);
+  right: -8vw;
+  top: -13vw;
+  width: clamp(180px, 28vw, 420px);
   max-width: none;
   z-index: 2;
-  transform: rotate(-16deg);
+  transform: rotate(-20deg);
 }
 
 .hero__filmstrip img {
@@ -119,7 +119,7 @@ body {
   position: absolute;
   left: 6vw;
   bottom: 3vw;
-  color: #7b272d;
+  color: #323236;
   z-index: 2;
   animation: bounceArrow 1.8s ease-in-out infinite;
 }
@@ -151,7 +151,7 @@ body {
   left: 0;
   width: 100%;
   height: 6px;
-  background-color: #7b272d;
+  background-color: #323236;
   z-index: 2;
 }
 
@@ -161,7 +161,7 @@ body {
   display: flex;
   align-items: stretch;
   min-height: 90vh;
-  background-color: #efe8de;
+  background-color: #f0f1e0;
 }
 
 .intro__image {
@@ -201,7 +201,7 @@ body {
   align-self: flex-start;
   padding: 1rem 2rem;
   border-radius: 20px;
-  background-color: #7b272d; /* samme rustfarve som navigationspillen */
+  background-color: #323236;
   color: #f5efe6;
   text-decoration: none;
   font-family: "Playfair Display", serif;
@@ -218,7 +218,7 @@ body {
   position: absolute;
   right: 6vw;
   top: 80%;
-  color: #601b20;
+  color: #323236;
   animation: bounceArrowCentered 1.8s ease-in-out infinite;
 }
 
@@ -274,7 +274,7 @@ body {
   font-weight: 700;
   font-size: 3.5rem;
   text-align: center;
-  color: #43301a;
+  color: #323236;
   margin-bottom: 4rem;
   margin-top: 4rem;
 }
@@ -325,7 +325,7 @@ body {
 }
 
 .project-row__link {
-  color: #a43121;
+  color: #000000;
   font-weight: 600;
 }
 
@@ -336,7 +336,7 @@ body {
 /* Orange streg mellem projekterne */
 .projects__divider {
   height: 4.5px;
-  background-color: #7b272d;
+  background-color: #323236;
   margin: 4rem 0;
 }
 
@@ -353,10 +353,6 @@ body {
     min-height: 260px;
     width: 100%;
   }
-
-  .bio-photo--right {
-    left: 40%;
-  }
 }
 
 /* ===== Sektion under stregen ===== */
@@ -371,7 +367,7 @@ body {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #5c4326;
+  color: #323236;
 }
 
 .about__text {
@@ -416,7 +412,7 @@ body {
   font-weight: 700;
   font-size: 3.5rem;
   text-align: center;
-  color: #43301a;
+  color: #323236;
   margin-bottom: 1rem;
 }
 
@@ -443,7 +439,7 @@ body {
 .contact-cta__link {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
-  color: #a43121;
+  color: #323236;
 }
 
 .contact-cta__link:hover {
@@ -601,7 +597,7 @@ html {
 
 .bio__contact-link {
   display: inline-block;
-  color: #a43121;
+  color: #323236;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -613,7 +609,9 @@ html {
 }
 
 .bio-photo {
-  width: 340px;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
   display: block;
 }
 
@@ -622,16 +620,18 @@ html {
   left: 0;
   top: 0;
   z-index: 2;
-  width: 320px;
+  width: clamp(150px, 27vw, 320px);
+  height: auto;
   transform: rotate(-6deg);
 }
 
 .bio-photo--right {
   position: absolute;
-  left: 170px;
-  top: 70px;
+  left: clamp(85px, 14vw, 170px);
+  top: clamp(30px, 5.8vw, 70px);
   z-index: 1;
-  width: 380px;
+  width: clamp(180px, 32vw, 380px);
+  height: auto;
   transform: rotate(10deg);
 }
 
@@ -668,7 +668,7 @@ html {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 10px solid #7b272d;
+  border-top: 10px solid #323236;
   transition: transform 0.25s ease;
   transform: rotate(-90deg); /* peger til højre, når lukket */
 }
@@ -705,7 +705,7 @@ html {
 
 .accordion__divider {
   height: 2px;
-  background-color: #7b272d;
+  background-color: #323236;
   margin: 1.5rem 0 2.5rem;
 }
 
