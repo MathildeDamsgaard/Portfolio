@@ -39,10 +39,10 @@ body {
 /* Navnet i script-font, ligger ovenpå baggrundsteksten */
 .hero__name {
   position: absolute;
-  top: 24vw;
-  left: 47%;
+  top: 23vw;
+  left: 46%;
   transform: translateX(-50%);
-  font-family: "Mrs Saint Delafield", cursive;
+  font-family: "Herr Von Muellerhoff", cursive;
   font-size: 8vw;
   font-weight: 400;
   color: #5c4326; /* mørk brun/oliven farve som på billedet */
@@ -184,7 +184,7 @@ body {
 
 .intro__text {
   font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   color: #2b2b2b;
   margin-bottom: 2rem;
