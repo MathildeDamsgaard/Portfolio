@@ -88,7 +88,7 @@ body {
   position: absolute;
   right: -14vw;
   top: -15vw;
-  width: 500px;
+  width: clamp(220px, 34vw, 500px);
   max-width: none;
   z-index: 2;
   transform: rotate(-16deg);
@@ -122,6 +122,11 @@ body {
   color: #7b272d;
   z-index: 2;
   animation: bounceArrow 1.8s ease-in-out infinite;
+}
+
+.hero__scroll-arrow svg {
+  width: clamp(18px, 2.2vw, 32px);
+  height: clamp(68px, 8.2vw, 120px);
 }
 
 .hero__scroll-arrow:hover {
@@ -167,6 +172,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   filter: grayscale(
     100%
@@ -216,6 +222,11 @@ body {
   animation: bounceArrowCentered 1.8s ease-in-out infinite;
 }
 
+.intro__scroll-arrow svg {
+  width: clamp(20px, 2.3vw, 34px);
+  height: clamp(68px, 8.2vw, 120px);
+}
+
 .intro__scroll-arrow:hover {
   opacity: 0.75;
 }
@@ -230,7 +241,7 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .intro {
     flex-direction: column;
     min-height: auto;
@@ -324,8 +335,8 @@ body {
 
 /* Orange streg mellem projekterne */
 .projects__divider {
-  height: 3px;
-  background-color: #a43121;
+  height: 4.5px;
+  background-color: #7b272d;
   margin: 4rem 0;
 }
 
@@ -657,7 +668,7 @@ html {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 10px solid #a43121;
+  border-top: 10px solid #7b272d;
   transition: transform 0.25s ease;
   transform: rotate(-90deg); /* peger til højre, når lukket */
 }
@@ -694,7 +705,7 @@ html {
 
 .accordion__divider {
   height: 2px;
-  background-color: #a43121;
+  background-color: #7b272d;
   margin: 1.5rem 0 2.5rem;
 }
 
@@ -946,18 +957,10 @@ html {
 
 .next-project__button {
   display: inline-block;
-  padding: 1rem 2rem;
-  background-color: #7b272d;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  font-weight: 600;
-  border-radius: 20px;
-  transition: 0.2s ease;
-}
-
-.next-project__button:hover {
-  background-color: #a43121;
-  transform: translateY(-2px);
+  font-weight: 900;
+  font-size: 1.3rem;
 }
 
 /* ===== Responsivt (mobil) ===== */
