@@ -902,6 +902,15 @@ html {
   max-width: 380px;
 }
 
+.case-img--video {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.case-img--kamera {
+  max-width: 340px;
+}
+
 @media (max-width: 700px) {
   .case-row,
   .case-row--reverse {
