@@ -79,6 +79,7 @@
       </div>
 
       <div class="intro__content">
+        <h2 class="projects__title projects__title__mig">Lidt om mig</h2>
         <p class="intro__text">
           Hej!<br />
           Mit navn er Mathilde, jeg er 24 år gammel og bor i Aarhus. Til dagligt
@@ -140,7 +141,7 @@
       <h2 class="projects__title">Udvalgte projekter</h2>
 
       <!-- Projekt 1: billede venstre, tekst højre -->
-      <div class="project-row">
+      <div class="project-row project-row--reverse">
         <div class="project-row__image fly-in-left">
           <img
             src="img/hundehimlen-mockup.png"
@@ -164,7 +165,7 @@
       <div class="projects__divider"></div>
 
       <!-- Projekt 2: tekst venstre, billede højre -->
-      <div class="project-row project-row--reverse">
+      <div class="project-row">
         <div class="project-row__image project-row__image--small fly-in-right">
           <img
             src="img/museum-ovartaci-mockup.png"
@@ -189,17 +190,35 @@
 
     <!-- Kontakt-sektion nederst på forsiden -->
     <section class="contact-cta" id="kontakt">
-      <h2 class="contact-cta__title">Vil du høre mere?</h2>
-      <p class="contact-cta__text">
-        Jeg er altid klar på en uforpligtende snak, så vi kan lære hinanden
-        bedre at kende :)
-      </p>
-      <p class="contact-cta__mail-row">
-        <span class="contact-cta__icon">&#9993;</span>
-        <a href="mailto:mathilde@damsgaard-hansen.dk" class="contact-cta__link"
-          >mathilde@damsgaard-hansen.dk</a
-        >
-      </p>
+      <div class="contact-cta__inner">
+        <div class="contact-cta__content">
+          <h2 class="contact-cta__title">Vil du høre mere?</h2>
+
+          <p class="contact-cta__text">
+            Jeg er altid klar på en uforpligtende snak, så vi kan lære hinanden
+            bedre at kende :)
+          </p>
+
+          <p class="contact-cta__mail-row">
+            <span class="contact-cta__icon">&#9993;</span>
+            <a
+              href="mailto:mathilde@damsgaard-hansen.dk"
+              class="contact-cta__link"
+            >
+              mathilde@damsgaard-hansen.dk
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Telefon: hænger fast på den grå linje øverst i sektionen -->
+      <img
+        src="img/telefon.png"
+        alt="Illustration af gammeldags telefonrør"
+        class="contact-cta__phone"
+      />
+      <div class="hero__divider"></div>
+      <div class="hero__divider"></div>
     </section>
 
     <footer class="footer">

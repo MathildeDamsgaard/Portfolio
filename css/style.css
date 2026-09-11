@@ -201,7 +201,7 @@ body {
   align-self: flex-start;
   padding: 1rem 2rem;
   border-radius: 20px;
-  background-color: #323236;
+  background-color: #013b07;
   color: #f5efe6;
   text-decoration: none;
   font-family: "Playfair Display", serif;
@@ -279,6 +279,12 @@ body {
   margin-top: 4rem;
 }
 
+.projects__title__mig {
+  text-align: left;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
 .project-row {
   display: flex;
   align-items: center;
@@ -325,12 +331,12 @@ body {
 }
 
 .project-row__link {
-  color: #000000;
+  color: #013b07;
   font-weight: 600;
 }
 
 .project-row__link:hover {
-  color: #792216;
+  color: #016d0b;
 }
 
 /* Orange streg mellem projekterne */
@@ -439,7 +445,7 @@ body {
 .contact-cta__link {
   font-family: "Playfair Display", serif;
   font-size: 1.3rem;
-  color: #323236;
+  color: #013b07;
 }
 
 .contact-cta__link:hover {
@@ -473,7 +479,7 @@ html {
 }
 
 .footer__left a:hover {
-  color: #a43121;
+  color: #016d0b;
 }
 
 /* Tilbage til toppen - placeret i højre side */
@@ -496,7 +502,7 @@ html {
 
 /* Hover-effekt */
 .back-to-top-inline:hover {
-  color: #a43121;
+  color: #016d0b;
 }
 
 .back-to-top-inline:hover svg {
@@ -528,7 +534,7 @@ html {
 }
 
 .bio__back:hover {
-  color: #a43121;
+  color: #016d0b;
 }
 
 .bio-section {
@@ -597,7 +603,7 @@ html {
 
 .bio__contact-link {
   display: inline-block;
-  color: #323236;
+  color: #013b07;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -605,7 +611,7 @@ html {
 }
 
 .bio__contact-link:hover {
-  color: #792216;
+  color: #016d0b;
 }
 
 .bio-photo {
@@ -668,7 +674,7 @@ html {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 10px solid #323236;
+  border-top: 10px solid #013b07;
   transition: transform 0.25s ease;
   transform: rotate(-90deg); /* peger til højre, når lukket */
 }
@@ -803,14 +809,14 @@ html {
 }
 
 .case-row__link {
-  color: #a1402a;
+  color: #013b07;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
 .case-row__link:hover {
-  color: #7e3020;
+  color: #016d0b;
 }
 
 /* ===== Ovartaci - Projektet ===== */
@@ -852,6 +858,10 @@ html {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.case-img--fodertest {
+  border: 2px solid #000000;
 }
 
 /* Individuelle størrelser pr. billede — juster frit efter behov */
@@ -961,6 +971,43 @@ html {
   text-decoration: none;
   font-weight: 900;
   font-size: 1.3rem;
+}
+
+/* ===== Kontakt ===== */
+
+.contact-cta {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background-color: #fdfdfd;
+  padding: 1rem 8vw 2rem;
+  border-top: 6px solid #323236;
+  overflow: hidden;
+}
+
+.contact-cta__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-cta__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.contact-cta__phone {
+  position: absolute;
+  right: 12%;
+  top: 0;
+  width: clamp(130px, 14vw, 230px);
+  height: auto;
 }
 
 /* ===== Responsivt (mobil) ===== */
