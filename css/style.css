@@ -551,13 +551,12 @@ html {
 
 .bio-section__body {
   display: flex;
-  gap: 3rem;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .bio-section__text {
-  flex: 2 1 500px;
+  flex: 2 1 560px;
   font-size: 1.1rem;
   line-height: 1.7;
   color: #2b2b2b;
@@ -591,9 +590,11 @@ html {
 }
 
 .bio-section__photos--single {
+  flex: 1.8 1 720px;
   min-height: auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-right: -9rem;
 }
 
 .bio-section__closing {
@@ -621,24 +622,11 @@ html {
   display: block;
 }
 
-.bio-photo--left {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 2;
-  width: clamp(150px, 27vw, 320px);
+.bio-photo-detaljer {
+  width: 100%;
+  max-width: none;
   height: auto;
-  transform: rotate(-6deg);
-}
-
-.bio-photo--right {
-  position: absolute;
-  left: clamp(85px, 14vw, 170px);
-  top: clamp(30px, 5.8vw, 70px);
-  z-index: 1;
-  width: clamp(180px, 32vw, 380px);
-  height: auto;
-  transform: rotate(10deg);
+  display: block;
 }
 
 /* ===== CV / Uddannelse accordion ===== */
