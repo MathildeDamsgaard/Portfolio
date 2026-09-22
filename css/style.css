@@ -174,9 +174,6 @@ body {
   object-fit: cover;
   object-position: center top;
   display: block;
-  filter: grayscale(
-    100%
-  ); /* gør billedet sort/hvid automatisk, uanset original farve */
 }
 
 .intro__content {
